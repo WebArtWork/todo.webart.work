@@ -1,0 +1,38 @@
+<div class="search">
+	<h1 class="search__title" translate>Пошук</h1>
+
+	<input
+		pInputText
+		type="text"
+		class="search__input"
+		[value]="query()"
+		[placeholder]="translateService.translate('Пошук проектів і задач...')()"
+		(input)="onQueryChange($any($event.target).value)"
+	/>
+
+	@if (query().trim()) {
+		<div class="search__section">
+			<h2 class="search__section-title" translate>Проекти</h2>
+
+			@for (project of projects(); track project._id) {
+				<a [routerLink]="['/projects', project._id]" class="search__result">
+					{{ project.name }}
+				</a>
+			} @empty {
+				<p class="search__empty" translate>Нічого не знайдено</p>
+			}
+		</div>
+
+		<div class="search__section">
+			<h2 class="search__section-title" translate>Задачі</h2>
+
+			@for (task of tasks(); track task._id) {
+				<a [routerLink]="['/tasks', task._id]" class="search__result">
+					{{ task.title }}
+				</a>
+			} @empty {
+				<p class="search__empty" translate>Нічого не знайдено</p>
+			}
+		</div>
+	}
+</div>

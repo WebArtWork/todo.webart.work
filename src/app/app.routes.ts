@@ -75,6 +75,19 @@ export const routes: Routes = [
 					),
 			},
 			{
+				path: 'search',
+				canActivate: [authenticatedGuard, MetaGuard],
+				data: {
+					meta: {
+						title: 'Пошук',
+					},
+				},
+				loadChildren: () =>
+					import('./pages/search/search.routes').then(
+						(m) => m.routes,
+					),
+			},
+			{
 				path: 'my-tasks',
 				canActivate: [authenticatedGuard, MetaGuard],
 				data: {
