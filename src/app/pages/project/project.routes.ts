@@ -33,6 +33,11 @@ export const routes: Routes = [
 						(m) => m.ProjectSettingsComponent,
 					),
 			},
+			{
+				path: 'sprints',
+				loadChildren: () =>
+					import('./sprints/sprints.routes').then((m) => m.routes),
+			},
 		],
 	},
 ];

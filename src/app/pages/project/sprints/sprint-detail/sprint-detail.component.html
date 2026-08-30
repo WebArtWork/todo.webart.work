@@ -1,0 +1,19 @@
+@if (sprint(); as sprint) {
+	<div class="sprint-detail">
+		<header class="sprint-detail__header">
+			<h2 class="sprint-detail__title">{{ sprint.name }}</h2>
+			<p-tag [value]="sprint.status" />
+		</header>
+
+		<p class="sprint-detail__goal">{{ sprint.goal }}</p>
+		<span class="sprint-detail__dates">{{ sprint.startDate }} — {{ sprint.endDate }}</span>
+
+		<div class="sprint-detail__tasks">
+			@for (task of tasks(); track task._id) {
+				<app-task-card [task]="task" />
+			} @empty {
+				<p translate>У цьому спринті немає задач</p>
+			}
+		</div>
+	</div>
+}

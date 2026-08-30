@@ -1,0 +1,14 @@
+<div class="sprints-list">
+	@for (sprint of sprints(); track sprint._id) {
+		<a [routerLink]="[sprint._id]" class="sprints-list__item">
+			<div class="sprints-list__row">
+				<span class="sprints-list__name">{{ sprint.name }}</span>
+				<p-tag [value]="statusLabel(sprint.status)" [severity]="statusSeverity(sprint.status)" />
+			</div>
+			<p class="sprints-list__goal">{{ sprint.goal }}</p>
+			<span class="sprints-list__dates">{{ sprint.startDate }} — {{ sprint.endDate }}</span>
+		</a>
+	} @empty {
+		<p translate>Немає спринтів</p>
+	}
+</div>
