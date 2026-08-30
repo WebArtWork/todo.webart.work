@@ -1,0 +1,46 @@
+@if (task(); as task) {
+	<div class="task">
+		@if (project(); as project) {
+			<a [routerLink]="['/projects', project._id]" class="task__breadcrumb">
+				{{ project.name }}
+			</a>
+		}
+
+		<h1 class="task__title">{{ task.title }}</h1>
+		<p class="task__description">{{ task.description }}</p>
+
+		<div class="task__tags">
+			@for (tag of tags(); track tag._id) {
+				<p-tag [value]="tag.name" [severity]="tag.severity" />
+			}
+		</div>
+
+		<div class="task__meta">
+			<div class="task__field">
+				<span class="task__label" translate>Статус</span>
+				<span>{{ task.status }}</span>
+			</div>
+
+			<div class="task__field">
+				<span class="task__label" translate>Пріоритет</span>
+				<span>{{ task.priority }}</span>
+			</div>
+
+			<div class="task__field">
+				<span class="task__label" translate>Виконавець</span>
+				<span>{{ task.assignee }}</span>
+			</div>
+
+			@if (sprint(); as sprint) {
+				<div class="task__field">
+					<span class="task__label" translate>Спринт</span>
+					<a [routerLink]="['/projects', project()?._id, 'sprints', sprint._id]">
+						{{ sprint.name }}
+					</a>
+				</div>
+			}
+		</div>
+	</div>
+} @else {
+	<p class="task__not-found" translate>Задачу не знайдено</p>
+}
