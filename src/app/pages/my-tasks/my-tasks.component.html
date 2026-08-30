@@ -1,0 +1,11 @@
+<div class="my-tasks">
+	<h1 class="my-tasks__title" translate>Мої задачі</h1>
+
+	<div class="my-tasks__list">
+		@for (task of tasks(); track task._id) {
+			<app-task-card [task]="task" />
+		} @empty {
+			<p class="my-tasks__empty" translate>У вас немає призначених задач</p>
+		}
+	</div>
+</div>

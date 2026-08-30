@@ -75,6 +75,19 @@ export const routes: Routes = [
 					),
 			},
 			{
+				path: 'my-tasks',
+				canActivate: [authenticatedGuard, MetaGuard],
+				data: {
+					meta: {
+						title: 'Мої задачі',
+					},
+				},
+				loadChildren: () =>
+					import('./pages/my-tasks/my-tasks.routes').then(
+						(m) => m.routes,
+					),
+			},
+			{
 				path: 'tasks',
 				canActivate: [authenticatedGuard, MetaGuard],
 				data: {

@@ -53,6 +53,15 @@
 
 	<app-nav-icon
 		[class.sidebar--minimized-icon]="!showNames()"
+		[name]="showNames() ? translateService.translate('Мої задачі')() : ''"
+		[ariaLabel]="translateService.translate('Мої задачі')()"
+		(click)="closeIfOverlay()"
+		routerLink="/my-tasks"
+		icon="check-square"
+	/>
+
+	<app-nav-icon
+		[class.sidebar--minimized-icon]="!showNames()"
 		[name]="showNames() ? translateService.translate('Settings')() : ''"
 		[ariaLabel]="translateService.translate('Settings')()"
 		(click)="closeIfOverlay()"
