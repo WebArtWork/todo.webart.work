@@ -28,7 +28,7 @@ jobs:
               run: npm run build
 
             - name: Add CNAME file
-              run: echo "ngx-prime-default.webart.work" > dist/app/browser/CNAME
+              run: echo "todo.webart.work" > dist/app/browser/CNAME
 
             - name: Add SPA fallback for GitHub Pages route reload
               run: cp dist/app/browser/index.html dist/app/browser/404.html
@@ -53,7 +53,7 @@ jobs:
                   git add --all .  # Add all changes
                   git commit -m "Deploy app to GitHub Pages"
                   git checkout -B gh-pages  # Switch to gh-pages branch
-                  git push git@github.com:WebArtWork/ngx-prime-default.webart.work.git gh-pages --force
+                  git push git@github.com:WebArtWork/todo.webart.work.git gh-pages --force
 
             - name: Clean up SSH
               run: |
