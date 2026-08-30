@@ -1,0 +1,37 @@
+.releases-list {
+	display: flex;
+	flex-direction: column;
+	gap: var(--sp-3);
+	max-width: 560px;
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		gap: var(--sp-1);
+		padding: var(--sp-3);
+		border: 1px solid var(--c-border);
+		border-radius: var(--radius-card);
+		text-decoration: none;
+		color: inherit;
+	}
+
+	&__row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: var(--sp-2);
+	}
+
+	&__version {
+		font-weight: 600;
+	}
+
+	&__name {
+		color: var(--c-text-secondary);
+	}
+
+	&__date {
+		font-size: 0.8rem;
+		color: var(--c-text-muted);
+	}
+}

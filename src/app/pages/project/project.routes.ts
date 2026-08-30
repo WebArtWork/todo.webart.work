@@ -38,6 +38,11 @@ export const routes: Routes = [
 				loadChildren: () =>
 					import('./sprints/sprints.routes').then((m) => m.routes),
 			},
+			{
+				path: 'releases',
+				loadChildren: () =>
+					import('./releases/releases.routes').then((m) => m.routes),
+			},
 		],
 	},
 ];

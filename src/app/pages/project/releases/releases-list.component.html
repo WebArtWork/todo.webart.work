@@ -1,0 +1,14 @@
+<div class="releases-list">
+	@for (release of releases(); track release._id) {
+		<a [routerLink]="[release._id]" class="releases-list__item">
+			<div class="releases-list__row">
+				<span class="releases-list__version">{{ release.version }}</span>
+				<p-tag [value]="statusLabel(release.status)" [severity]="statusSeverity(release.status)" />
+			</div>
+			<span class="releases-list__name">{{ release.name }}</span>
+			<span class="releases-list__date">{{ release.releaseDate }}</span>
+		</a>
+	} @empty {
+		<p translate>Немає релізів</p>
+	}
+</div>
