@@ -1,0 +1,90 @@
+[
+	{
+		"_id": "task-1",
+		"projectId": "proj-todo-web",
+		"sprintId": "sprint-todo-1",
+		"tagIds": ["tag-feature"],
+		"title": "Створити модель проектів",
+		"description": "Додати сутність проекту з ключем, назвою та описом.",
+		"status": "done",
+		"priority": "high",
+		"assignee": "Оксана"
+	},
+	{
+		"_id": "task-2",
+		"projectId": "proj-todo-web",
+		"sprintId": "sprint-todo-1",
+		"tagIds": ["tag-feature"],
+		"title": "Створити модель задач",
+		"description": "Задача належить проекту, спринту або бэклогу.",
+		"status": "done",
+		"priority": "high",
+		"assignee": "Максим"
+	},
+	{
+		"_id": "task-3",
+		"projectId": "proj-todo-web",
+		"sprintId": "sprint-todo-1",
+		"tagIds": ["tag-docs"],
+		"title": "Описати архітектуру даних",
+		"description": "README та коментарі щодо сутностей і зв'язків.",
+		"status": "done",
+		"priority": "medium",
+		"assignee": "Оксана"
+	},
+	{
+		"_id": "task-4",
+		"projectId": "proj-todo-web",
+		"sprintId": "sprint-todo-2",
+		"tagIds": ["tag-feature"],
+		"title": "Дошка задач по проекту",
+		"description": "Канбан-дошка зі статусами: до роботи, в роботі, огляд, зроблено.",
+		"status": "in-progress",
+		"priority": "high",
+		"assignee": "Максим"
+	},
+	{
+		"_id": "task-5",
+		"projectId": "proj-todo-web",
+		"sprintId": "sprint-todo-2",
+		"tagIds": ["tag-improvement"],
+		"title": "Сторінка бэклогу",
+		"description": "Задачі проекту, які ще не потрапили у спринт.",
+		"status": "review",
+		"priority": "medium",
+		"assignee": "Ірина"
+	},
+	{
+		"_id": "task-6",
+		"projectId": "proj-todo-web",
+		"sprintId": "sprint-todo-2",
+		"tagIds": ["tag-feature"],
+		"title": "Сторінки спринтів і релізів",
+		"description": "Список і деталі спринту/релізу в межах проекту.",
+		"status": "todo",
+		"priority": "high",
+		"assignee": "Оксана"
+	},
+	{
+		"_id": "task-7",
+		"projectId": "proj-todo-web",
+		"sprintId": null,
+		"tagIds": ["tag-bug"],
+		"title": "Виправити дублікати тегів на дошці",
+		"description": "Однаковий тег відображається двічі на картці задачі.",
+		"status": "todo",
+		"priority": "low",
+		"assignee": "Максим"
+	},
+	{
+		"_id": "task-8",
+		"projectId": "proj-marketing",
+		"sprintId": "sprint-mkt-1",
+		"tagIds": ["tag-design"],
+		"title": "Макет головної сторінки",
+		"description": "Перший екран лендінгу з описом продукту.",
+		"status": "todo",
+		"priority": "medium",
+		"assignee": "Ірина"
+	}
+]

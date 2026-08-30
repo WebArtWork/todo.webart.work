@@ -1,0 +1,29 @@
+[
+	{
+		"_id": "sprint-todo-1",
+		"projectId": "proj-todo-web",
+		"name": "Спринт 1",
+		"goal": "Базова структура: проекти, задачі, теги.",
+		"status": "completed",
+		"startDate": "2026-08-03",
+		"endDate": "2026-08-16"
+	},
+	{
+		"_id": "sprint-todo-2",
+		"projectId": "proj-todo-web",
+		"name": "Спринт 2",
+		"goal": "Дошка задач, бэклог, спринти та релізи.",
+		"status": "active",
+		"startDate": "2026-08-17",
+		"endDate": "2026-08-30"
+	},
+	{
+		"_id": "sprint-mkt-1",
+		"projectId": "proj-marketing",
+		"name": "Спринт 1",
+		"goal": "Перша версія лендінгу.",
+		"status": "planned",
+		"startDate": "2026-09-01",
+		"endDate": "2026-09-14"
+	}
+]

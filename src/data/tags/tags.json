@@ -1,0 +1,7 @@
+[
+	{ "_id": "tag-bug", "name": "Баг", "severity": "danger" },
+	{ "_id": "tag-feature", "name": "Функціонал", "severity": "info" },
+	{ "_id": "tag-improvement", "name": "Покращення", "severity": "success" },
+	{ "_id": "tag-design", "name": "Дизайн", "severity": "warn" },
+	{ "_id": "tag-docs", "name": "Документація", "severity": "secondary" }
+]
