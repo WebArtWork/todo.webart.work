@@ -1,0 +1,15 @@
+<div class="board">
+	@for (status of statuses; track status) {
+		<div class="board__column">
+			<div class="board__column-title">{{ statusLabel(status) }}</div>
+
+			<div class="board__column-tasks">
+				@for (task of tasksByStatus(status); track task._id) {
+					<app-task-card [task]="task" />
+				} @empty {
+					<p class="board__empty" translate>Немає задач</p>
+				}
+			</div>
+		</div>
+	}
+</div>

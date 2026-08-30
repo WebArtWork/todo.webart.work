@@ -1,0 +1,11 @@
+.backlog {
+	display: flex;
+	flex-direction: column;
+	gap: var(--sp-2);
+	max-width: 480px;
+
+	&__empty {
+		margin: 0;
+		color: var(--c-text-muted);
+	}
+}

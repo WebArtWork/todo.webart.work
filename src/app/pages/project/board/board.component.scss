@@ -1,0 +1,33 @@
+.board {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(220px, 1fr));
+	gap: var(--sp-3);
+	overflow-x: auto;
+
+	&__column {
+		display: flex;
+		flex-direction: column;
+		gap: var(--sp-2);
+		min-width: 220px;
+	}
+
+	&__column-title {
+		font-weight: 600;
+		color: var(--c-text-secondary);
+		font-size: 0.85rem;
+		text-transform: uppercase;
+		letter-spacing: 0.03em;
+	}
+
+	&__column-tasks {
+		display: flex;
+		flex-direction: column;
+		gap: var(--sp-2);
+	}
+
+	&__empty {
+		margin: 0;
+		color: var(--c-text-muted);
+		font-size: 0.85rem;
+	}
+}

@@ -1,0 +1,43 @@
+.project-shell {
+	display: flex;
+	flex-direction: column;
+	gap: var(--sp-4);
+	padding: var(--sp-4);
+
+	&__header {
+		display: flex;
+		align-items: baseline;
+		gap: var(--sp-2);
+	}
+
+	&__title {
+		margin: 0;
+		font-size: 1.5rem;
+		font-weight: 700;
+	}
+
+	&__key {
+		color: var(--c-text-muted);
+		font-size: 0.85rem;
+	}
+
+	&__tabs {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--sp-3);
+		border-bottom: 1px solid var(--c-border);
+
+		a {
+			padding: var(--sp-2) 0;
+			color: var(--c-text-secondary);
+			text-decoration: none;
+			border-bottom: 2px solid transparent;
+
+			&._active {
+				color: var(--c-text-primary);
+				border-bottom-color: var(--c-text-primary);
+				font-weight: 600;
+			}
+		}
+	}
+}

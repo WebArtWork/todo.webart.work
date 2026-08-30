@@ -1,0 +1,27 @@
+@if (project(); as project) {
+	<div class="project-settings">
+		<div class="project-settings__field">
+			<span class="project-settings__label" translate>Назва</span>
+			<span>{{ project.name }}</span>
+		</div>
+
+		<div class="project-settings__field">
+			<span class="project-settings__label" translate>Ключ</span>
+			<span>{{ project.key }}</span>
+		</div>
+
+		<div class="project-settings__field">
+			<span class="project-settings__label" translate>Опис</span>
+			<span>{{ project.description }}</span>
+		</div>
+
+		<div class="project-settings__field">
+			<span class="project-settings__label" translate>Теги</span>
+			<div class="project-settings__tags">
+				@for (tag of tags(); track tag._id) {
+					<p-tag [value]="tag.name" [severity]="tag.severity" />
+				}
+			</div>
+		</div>
+	</div>
+}

@@ -1,0 +1,30 @@
+@if (project(); as project) {
+	<div class="project-shell">
+		<header class="project-shell__header">
+			<h1 class="project-shell__title">{{ project.name }}</h1>
+			<span class="project-shell__key">{{ project.key }}</span>
+		</header>
+
+		<nav class="project-shell__tabs">
+			<a [routerLink]="['/projects', project._id]" routerLinkActive="_active" [routerLinkActiveOptions]="{ exact: true }" translate>
+				Дошка
+			</a>
+			<a [routerLink]="['/projects', project._id, 'backlog']" routerLinkActive="_active" translate>
+				Бэклог
+			</a>
+			<a [routerLink]="['/projects', project._id, 'sprints']" routerLinkActive="_active" translate>
+				Спринти
+			</a>
+			<a [routerLink]="['/projects', project._id, 'releases']" routerLinkActive="_active" translate>
+				Релізи
+			</a>
+			<a [routerLink]="['/projects', project._id, 'settings']" routerLinkActive="_active" translate>
+				Налаштування
+			</a>
+		</nav>
+
+		<div class="project-shell__content">
+			<router-outlet />
+		</div>
+	</div>
+}
