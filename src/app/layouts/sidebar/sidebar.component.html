@@ -51,6 +51,15 @@
 		icon="cog"
 	/>
 
+	<app-nav-icon
+		[class.sidebar--minimized-icon]="!showNames()"
+		[name]="showNames() ? translateService.translate('Теги')() : ''"
+		[ariaLabel]="translateService.translate('Теги')()"
+		(click)="closeIfOverlay()"
+		routerLink="/tags"
+		icon="tag"
+	/>
+
 	<hr class="my-2 border-0 border-t-2 border-t-[var(--c-text-primary)]" />
 
 	@if (userService.role('admin')) {

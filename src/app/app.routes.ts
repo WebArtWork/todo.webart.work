@@ -61,6 +61,17 @@ export const routes: Routes = [
 						(m) => m.routes,
 					),
 			},
+			{
+				path: 'tags',
+				canActivate: [authenticatedGuard, MetaGuard],
+				data: {
+					meta: {
+						title: 'Теги',
+					},
+				},
+				loadChildren: () =>
+					import('./pages/tags/tags.routes').then((m) => m.routes),
+			},
 		],
 	},
 	{
