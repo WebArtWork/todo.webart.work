@@ -1,0 +1,19 @@
+<div class="projects-page">
+	<h1 class="projects-page__title" translate>Проекти</h1>
+
+	<div class="projects-page__grid">
+		@for (project of projectsService.projects(); track project._id) {
+			<a [routerLink]="['/projects', project._id]" class="projects-page__link">
+				<p-card [header]="project.name" [subheader]="project.key">
+					<p class="projects-page__description">{{ project.description }}</p>
+
+					<div class="projects-page__tags">
+						@for (tag of tagsFor(project); track tag._id) {
+							<p-tag [value]="tag.name" [severity]="tag.severity" />
+						}
+					</div>
+				</p-card>
+			</a>
+		}
+	</div>
+</div>

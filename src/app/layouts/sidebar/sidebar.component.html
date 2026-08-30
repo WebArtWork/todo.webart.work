@@ -44,6 +44,15 @@
 
 	<app-nav-icon
 		[class.sidebar--minimized-icon]="!showNames()"
+		[name]="showNames() ? translateService.translate('Проекти')() : ''"
+		[ariaLabel]="translateService.translate('Проекти')()"
+		(click)="closeIfOverlay()"
+		routerLink="/projects"
+		icon="folder"
+	/>
+
+	<app-nav-icon
+		[class.sidebar--minimized-icon]="!showNames()"
 		[name]="showNames() ? translateService.translate('Settings')() : ''"
 		[ariaLabel]="translateService.translate('Settings')()"
 		(click)="closeIfOverlay()"
