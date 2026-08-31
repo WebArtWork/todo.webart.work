@@ -44,6 +44,15 @@
 
 	<app-nav-icon
 		[class.sidebar--minimized-icon]="!showNames()"
+		[name]="showNames() ? translateService.translate('Стрічка')() : ''"
+		[ariaLabel]="translateService.translate('Стрічка')()"
+		(click)="closeIfOverlay()"
+		routerLink="/feed"
+		icon="compass"
+	/>
+
+	<app-nav-icon
+		[class.sidebar--minimized-icon]="!showNames()"
 		[name]="showNames() ? translateService.translate('Проекти')() : ''"
 		[ariaLabel]="translateService.translate('Проекти')()"
 		(click)="closeIfOverlay()"

@@ -88,6 +88,17 @@ export const routes: Routes = [
 					),
 			},
 			{
+				path: 'feed',
+				canActivate: [authenticatedGuard, MetaGuard],
+				data: {
+					meta: {
+						title: 'Стрічка',
+					},
+				},
+				loadChildren: () =>
+					import('./pages/feed/feed.routes').then((m) => m.routes),
+			},
+			{
 				path: 'my-tasks',
 				canActivate: [authenticatedGuard, MetaGuard],
 				data: {
