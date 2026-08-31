@@ -62,6 +62,19 @@ export const routes: Routes = [
 					),
 			},
 			{
+				path: 'feedback',
+				canActivate: [MetaGuard],
+				data: {
+					meta: {
+						title: 'Відгук',
+					},
+				},
+				loadChildren: () =>
+					import('./pages/feedback/feedback.routes').then(
+						(m) => m.routes,
+					),
+			},
+			{
 				path: 'projects',
 				canActivate: [authenticatedGuard, MetaGuard],
 				data: {
