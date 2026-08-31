@@ -1,0 +1,1 @@
+var t=[{path:``,loadComponent:()=>import(`./chunk-DQ4JVtDw.js`).then(o=>o.SearchComponent)}];export{t as routes};

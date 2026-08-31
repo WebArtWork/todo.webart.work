@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /$
+Allow: /sign$
+Disallow: /
+
+Sitemap: https://todo.webart.work/sitemap.xml

@@ -1,0 +1,1 @@
+var t=[{path:`:id`,loadComponent:()=>import(`./chunk-Bi0GIX-Z2.js`).then(o=>o.TaskViewComponent)}];export{t as routes};
