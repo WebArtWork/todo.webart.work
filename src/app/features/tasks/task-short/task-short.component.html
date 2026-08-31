@@ -1,15 +1,15 @@
-<a [routerLink]="['/tasks', task()._id]" class="task-card">
-	<div class="task-card__title">{{ task().title }}</div>
+<a [routerLink]="['/tasks', task()._id]" class="task-short">
+	<div class="task-short__title">{{ task().title }}</div>
 
 	@if (tags().length) {
-		<div class="task-card__tags">
+		<div class="task-short__tags">
 			@for (tag of tags(); track tag._id) {
 				<p-tag [value]="tag.name" [severity]="tag.severity" />
 			}
 		</div>
 	}
 
-	<div class="task-card__meta">
+	<div class="task-short__meta">
 		<p-tag
 			[severity]="prioritySeverity()"
 			[value]="
@@ -21,6 +21,6 @@
 			"
 		/>
 
-		<span class="task-card__assignee">{{ task().assignee }}</span>
+		<span class="task-short__assignee">{{ task().assignee }}</span>
 	</div>
 </a>

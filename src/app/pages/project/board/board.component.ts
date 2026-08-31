@@ -3,7 +3,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { ActivatedRoute } from '@angular/router';
 import { map } from 'rxjs';
 import { TranslateDirective } from '@wawjs/ngx-translate';
-import { TaskCardComponent } from '../../../shared/task-card/task-card.component';
+import { TaskShortComponent } from '../../../features/tasks/task-short/task-short.component';
 import { TASK_STATUSES } from '../../../features/tasks/tasks.service';
 import { TasksService } from '../../../features/tasks/tasks.service';
 import { Task } from '../../../features/tasks/task.interface';
@@ -18,7 +18,7 @@ const STATUS_LABELS: Record<Task['status'], string> = {
 @Component({
 	templateUrl: './board.component.html',
 	styleUrl: './board.component.scss',
-	imports: [TaskCardComponent, TranslateDirective],
+	imports: [TaskShortComponent, TranslateDirective],
 })
 export class BoardComponent {
 	private readonly _tasksService = inject(TasksService);

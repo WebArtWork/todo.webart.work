@@ -1,6 +1,6 @@
 <div class="backlog">
 	@for (task of tasks(); track task._id) {
-		<app-task-card [task]="task" />
+		<app-task-short [task]="task" />
 	} @empty {
 		<p class="backlog__empty" translate>Бэклог порожній</p>
 	}

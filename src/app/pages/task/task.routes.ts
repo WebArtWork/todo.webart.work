@@ -4,6 +4,8 @@ export const routes: Routes = [
 	{
 		path: ':id',
 		loadComponent: () =>
-			import('./task.component').then((m) => m.TaskComponent),
+			import('../../features/tasks/task-view/task-view.component').then(
+				(m) => m.TaskViewComponent,
+			),
 	},
 ];

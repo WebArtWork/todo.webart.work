@@ -4,17 +4,17 @@ import { ActivatedRoute } from '@angular/router';
 import { map } from 'rxjs';
 import { TagModule } from '@wawjs/ngx-prime/tag';
 import { TranslateDirective } from '@wawjs/ngx-translate';
-import { TaskCardComponent } from '../../../../shared/task-card/task-card.component';
-import { ReleasesService } from '../../../../features/releases/releases.service';
-import { TasksService } from '../../../../features/tasks/tasks.service';
-import { Task } from '../../../../features/tasks/task.interface';
+import { TaskShortComponent } from '../../tasks/task-short/task-short.component';
+import { ReleasesService } from '../releases.service';
+import { TasksService } from '../../tasks/tasks.service';
+import { Task } from '../../tasks/task.interface';
 
 @Component({
-	templateUrl: './release-detail.component.html',
-	styleUrl: './release-detail.component.scss',
-	imports: [TagModule, TaskCardComponent, TranslateDirective],
+	templateUrl: './release-view.component.html',
+	styleUrl: './release-view.component.scss',
+	imports: [TagModule, TaskShortComponent, TranslateDirective],
 })
-export class ReleaseDetailComponent {
+export class ReleaseViewComponent {
 	private readonly _releasesService = inject(ReleasesService);
 	private readonly _tasksService = inject(TasksService);
 	private readonly _route = inject(ActivatedRoute);

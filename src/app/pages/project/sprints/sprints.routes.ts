@@ -15,8 +15,8 @@ export const routes: Routes = [
 		canActivate: [MetaGuard],
 		data: { meta: { title: 'Спринт' } },
 		loadComponent: () =>
-			import('./sprint-detail/sprint-detail.component').then(
-				(m) => m.SprintDetailComponent,
+			import('../../../features/sprints/sprint-view/sprint-view.component').then(
+				(m) => m.SprintViewComponent,
 			),
 	},
 ];
