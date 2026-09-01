@@ -3,13 +3,13 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { ActivatedRoute } from '@angular/router';
 import { map } from 'rxjs';
 import { TranslateDirective } from '@wawjs/ngx-translate';
-import { TaskCardComponent } from '../../../shared/task-card/task-card.component';
+import { TaskShortComponent } from '../../../features/tasks/task-short/task-short.component';
 import { TasksService } from '../../../features/tasks/tasks.service';
 
 @Component({
 	templateUrl: './backlog.component.html',
 	styleUrl: './backlog.component.scss',
-	imports: [TaskCardComponent, TranslateDirective],
+	imports: [TaskShortComponent, TranslateDirective],
 })
 export class BacklogComponent {
 	private readonly _tasksService = inject(TasksService);

@@ -4,16 +4,16 @@ import { ActivatedRoute } from '@angular/router';
 import { map } from 'rxjs';
 import { TagModule } from '@wawjs/ngx-prime/tag';
 import { TranslateDirective } from '@wawjs/ngx-translate';
-import { TaskCardComponent } from '../../../../shared/task-card/task-card.component';
-import { SprintsService } from '../../../../features/sprints/sprints.service';
-import { TasksService } from '../../../../features/tasks/tasks.service';
+import { TaskShortComponent } from '../../tasks/task-short/task-short.component';
+import { SprintsService } from '../sprints.service';
+import { TasksService } from '../../tasks/tasks.service';
 
 @Component({
-	templateUrl: './sprint-detail.component.html',
-	styleUrl: './sprint-detail.component.scss',
-	imports: [TagModule, TaskCardComponent, TranslateDirective],
+	templateUrl: './sprint-view.component.html',
+	styleUrl: './sprint-view.component.scss',
+	imports: [TagModule, TaskShortComponent, TranslateDirective],
 })
-export class SprintDetailComponent {
+export class SprintViewComponent {
 	private readonly _sprintsService = inject(SprintsService);
 	private readonly _tasksService = inject(TasksService);
 	private readonly _route = inject(ActivatedRoute);

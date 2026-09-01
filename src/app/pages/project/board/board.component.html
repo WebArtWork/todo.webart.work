@@ -5,7 +5,7 @@
 
 			<div class="board__column-tasks">
 				@for (task of tasksByStatus(status); track task._id) {
-					<app-task-card [task]="task" />
+					<app-task-short [task]="task" />
 				} @empty {
 					<p class="board__empty" translate>Немає задач</p>
 				}

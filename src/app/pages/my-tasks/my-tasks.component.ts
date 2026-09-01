@@ -1,13 +1,13 @@
 import { Component, computed, inject } from '@angular/core';
 import { UserService } from '@wawjs/ngx-bos';
 import { TranslateDirective } from '@wawjs/ngx-translate';
-import { TaskCardComponent } from '../../shared/task-card/task-card.component';
+import { TaskShortComponent } from '../../features/tasks/task-short/task-short.component';
 import { TasksService } from '../../features/tasks/tasks.service';
 
 @Component({
 	templateUrl: './my-tasks.component.html',
 	styleUrl: './my-tasks.component.scss',
-	imports: [TaskCardComponent, TranslateDirective],
+	imports: [TaskShortComponent, TranslateDirective],
 })
 export class MyTasksComponent {
 	private readonly _tasksService = inject(TasksService);

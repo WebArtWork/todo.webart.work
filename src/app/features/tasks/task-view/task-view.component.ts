@@ -4,17 +4,17 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { map } from 'rxjs';
 import { TagModule } from '@wawjs/ngx-prime/tag';
 import { TranslateDirective } from '@wawjs/ngx-translate';
-import { ProjectsService } from '../../features/projects/projects.service';
-import { SprintsService } from '../../features/sprints/sprints.service';
-import { TagsService } from '../../features/tags/tags.service';
-import { TasksService } from '../../features/tasks/tasks.service';
+import { ProjectsService } from '../../projects/projects.service';
+import { SprintsService } from '../../sprints/sprints.service';
+import { TagsService } from '../../tags/tags.service';
+import { TasksService } from '../tasks.service';
 
 @Component({
-	templateUrl: './task.component.html',
-	styleUrl: './task.component.scss',
+	templateUrl: './task-view.component.html',
+	styleUrl: './task-view.component.scss',
 	imports: [RouterLink, TagModule, TranslateDirective],
 })
-export class TaskComponent {
+export class TaskViewComponent {
 	private readonly _tasksService = inject(TasksService);
 	private readonly _tagsService = inject(TagsService);
 	private readonly _projectsService = inject(ProjectsService);

@@ -15,8 +15,8 @@ export const routes: Routes = [
 		canActivate: [MetaGuard],
 		data: { meta: { title: 'Реліз' } },
 		loadComponent: () =>
-			import('./release-detail/release-detail.component').then(
-				(m) => m.ReleaseDetailComponent,
+			import('../../../features/releases/release-view/release-view.component').then(
+				(m) => m.ReleaseViewComponent,
 			),
 	},
 ];

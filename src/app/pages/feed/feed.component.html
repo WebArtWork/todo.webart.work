@@ -5,7 +5,7 @@
 		@for (task of tasks(); track task._id) {
 			<div class="feed__item">
 				<span class="feed__project">{{ projectName(task.projectId) }}</span>
-				<app-task-card [task]="task" />
+				<app-task-short [task]="task" />
 			</div>
 		} @empty {
 			<p class="feed__empty" translate>Немає активних задач</p>

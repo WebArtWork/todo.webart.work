@@ -1,0 +1,18 @@
+@if (release(); as release) {
+	<div class="release-view">
+		<header class="release-view__header">
+			<h2 class="release-view__title">{{ release.version }} — {{ release.name }}</h2>
+			<p-tag [value]="release.status" />
+		</header>
+
+		<span class="release-view__date">{{ release.releaseDate }}</span>
+
+		<div class="release-view__tasks">
+			@for (task of tasks(); track task._id) {
+				<app-task-short [task]="task" />
+			} @empty {
+				<p translate>У цьому релізі немає задач</p>
+			}
+		</div>
+	</div>
+}
