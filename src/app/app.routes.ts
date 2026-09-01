@@ -75,6 +75,37 @@ export const routes: Routes = [
 					),
 			},
 			{
+				path: 'share-profile',
+				canActivate: [MetaGuard],
+				data: {
+					shareKind: 'profile',
+					meta: {
+						title: 'Поділитися профілем',
+						description: 'Відскануйте QR-код, щоб відкрити мій профіль ToDo.',
+						index: false,
+					},
+				},
+				loadChildren: () =>
+					import('./pages/share/share.routes').then(
+						(m) => m.routes,
+					),
+			},
+			{
+				path: 'share',
+				canActivate: [MetaGuard],
+				data: {
+					shareKind: 'app',
+					meta: {
+						title: 'Поділитися ToDo',
+						description: 'Відскануйте QR-код, щоб приєднатися до ToDo за кілька секунд.',
+					},
+				},
+				loadChildren: () =>
+					import('./pages/share/share.routes').then(
+						(m) => m.routes,
+					),
+			},
+			{
 				path: 'projects',
 				canActivate: [authenticatedGuard, MetaGuard],
 				data: {

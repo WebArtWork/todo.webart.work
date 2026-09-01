@@ -20,7 +20,27 @@ import { provideNgxSocket } from '@wawjs/ngx-socket';
 import { provideNgxTinymce } from '@wawjs/ngx-tinymce';
 import { provideTranslate } from '@wawjs/ngx-translate';
 import { provideNgxPrime } from '@wawjs/ngx-prime/config';
+import { definePreset } from '@wawjs/css-prime-styled';
 import Aura from '@wawjs/css-prime-themes/aura';
+
+/** ToDo brand gold, matched to the logo's medallion color. */
+const TodoPreset = definePreset(Aura, {
+	semantic: {
+		primary: {
+			50: '#fbf7ea',
+			100: '#f5eac9',
+			200: '#ecd591',
+			300: '#dfb857',
+			400: '#d1a034',
+			500: '#b8862a',
+			600: '#916821',
+			700: '#74531f',
+			800: '#5f451f',
+			900: '#503a1e',
+			950: '#2c1e0f',
+		},
+	},
+});
 import { NgxBosConfig, ngxBosProvide } from '@wawjs/ngx-bos';
 import { io } from 'socket.io-client';
 import { environment } from '@env';
@@ -73,7 +93,7 @@ export const appConfig: ApplicationConfig = {
 		}),
 		provideNgxPrime({
 			theme: {
-				preset: Aura,
+				preset: TodoPreset,
 				options: { darkModeSelector: "[data-mode='dark']" },
 			},
 		}),

@@ -44,6 +44,15 @@
 
 	<app-nav-icon
 		[class.sidebar--minimized-icon]="!showNames()"
+		[name]="showNames() ? translateService.translate('Шер профілю')() : ''"
+		[ariaLabel]="translateService.translate('Шер профілю')()"
+		(click)="closeIfOverlay()"
+		routerLink="/share-profile"
+		icon="id-card"
+	/>
+
+	<app-nav-icon
+		[class.sidebar--minimized-icon]="!showNames()"
 		[name]="showNames() ? translateService.translate('Стрічка')() : ''"
 		[ariaLabel]="translateService.translate('Стрічка')()"
 		(click)="closeIfOverlay()"
@@ -103,6 +112,15 @@
 		(click)="closeIfOverlay()"
 		routerLink="/feedback"
 		icon="comment"
+	/>
+
+	<app-nav-icon
+		[class.sidebar--minimized-icon]="!showNames()"
+		[name]="showNames() ? translateService.translate('Шер ToDo')() : ''"
+		[ariaLabel]="translateService.translate('Шер ToDo')()"
+		(click)="closeIfOverlay()"
+		routerLink="/share"
+		icon="qrcode"
 	/>
 
 	<hr class="my-2 border-0 border-t-2 border-t-[var(--c-text-primary)]" />
