@@ -167,6 +167,17 @@ export const routes: Routes = [
 					import('./pages/task/task.routes').then((m) => m.routes),
 			},
 			{
+				path: 'jobs',
+				canActivate: [authenticatedGuard, MetaGuard],
+				data: {
+					meta: {
+						title: 'Джоби',
+					},
+				},
+				loadChildren: () =>
+					import('./pages/jobs/jobs.routes').then((m) => m.routes),
+			},
+			{
 				path: 'tags',
 				canActivate: [authenticatedGuard, MetaGuard],
 				data: {

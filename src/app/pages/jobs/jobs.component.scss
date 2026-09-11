@@ -1,0 +1,29 @@
+.jobs-page {
+	display: flex;
+	flex-direction: column;
+	gap: var(--sp-4);
+	padding: var(--sp-4);
+
+	&__title {
+		margin: 0;
+		font-size: 1.5rem;
+		font-weight: 700;
+	}
+
+	&__subtitle {
+		margin: 0;
+		max-width: 640px;
+		color: var(--c-text-muted);
+	}
+
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+		gap: var(--sp-3);
+	}
+
+	&__empty {
+		margin: 0;
+		color: var(--c-text-muted);
+	}
+}

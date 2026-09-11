@@ -89,6 +89,15 @@
 
 	<app-nav-icon
 		[class.sidebar--minimized-icon]="!showNames()"
+		[name]="showNames() ? translateService.translate('Джоби')() : ''"
+		[ariaLabel]="translateService.translate('Джоби')()"
+		(click)="closeIfOverlay()"
+		routerLink="/jobs"
+		icon="briefcase"
+	/>
+
+	<app-nav-icon
+		[class.sidebar--minimized-icon]="!showNames()"
 		[name]="showNames() ? translateService.translate('Settings')() : ''"
 		[ariaLabel]="translateService.translate('Settings')()"
 		(click)="closeIfOverlay()"
