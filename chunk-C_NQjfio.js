@@ -1,0 +1,1 @@
+import{Yn as sG}from"./chunk-00exbmCc.js";var o=[{path:``,pathMatch:`full`,canActivate:[sG],data:{meta:{title:`Релізи`}},loadComponent:()=>import(`./chunk-D3xRfkWb2.js`).then(t=>t.ReleasesListComponent)},{path:`:releaseId`,canActivate:[sG],data:{meta:{title:`Реліз`}},loadComponent:()=>import(`./chunk-Cfwxz4kx2.js`).then(t=>t.ReleaseViewComponent)}];export{o as routes};

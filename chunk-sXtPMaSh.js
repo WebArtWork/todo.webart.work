@@ -1,0 +1,1 @@
+var t=[{path:`:id`,loadComponent:()=>import(`./chunk-Dx_hvWqq.js`).then(o=>o.TaskViewComponent)}];export{t as routes};

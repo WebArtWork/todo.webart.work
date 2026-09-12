@@ -1,0 +1,1 @@
+var t=[{path:``,loadComponent:()=>import(`./chunk-Dp-2lGX12.js`).then(o=>o.FeedComponent)}];export{t as routes};

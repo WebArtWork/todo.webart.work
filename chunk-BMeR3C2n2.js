@@ -1,0 +1,1 @@
+var o=[{path:``,pathMatch:`full`,loadComponent:()=>import(`./chunk-4eoowdxb2.js`).then(t=>t.ProjectsComponent)},{path:``,loadChildren:()=>import(`./chunk-D2QIujj8.js`).then(t=>t.routes)}];export{o as routes};

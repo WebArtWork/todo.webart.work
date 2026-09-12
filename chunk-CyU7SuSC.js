@@ -1,0 +1,1 @@
+import{Yn as sG}from"./chunk-00exbmCc.js";var e=[{path:``,pathMatch:`full`,canActivate:[sG],data:{meta:{title:`Спринти`}},loadComponent:()=>import(`./chunk-somefXGr.js`).then(t=>t.SprintsListComponent)},{path:`:sprintId`,canActivate:[sG],data:{meta:{title:`Спринт`}},loadComponent:()=>import(`./chunk-GLwGAoDz2.js`).then(t=>t.SprintViewComponent)}];export{e as routes};
